@@ -1,4 +1,72 @@
 /* styles.css */
-body {
-  background-color: rebeccapurple;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: purple;
+    padding: 0.6rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: lightskyblue;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.4rem black;
+}
+
+#content {
+    padding: 0 5rem;
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+.hero-image {
+    background-image: url(./images/hero-image.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    place-items: center;
+}
+
+.food {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: purple;
+    place-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
