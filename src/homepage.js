@@ -1,6 +1,13 @@
+// Import images
+import lasagna from './images/lasagna.jpg';
+import eggAvocado from './images/egg-avocado-toast.jpeg';
+import turkeySandwich from './images/turkey-sandwich.jpg';
+
 export const home = () => {
     const content = document.querySelector('#content');
     content.innerHTML = '';
+
+    // First div element
     const heroImage = document.createElement('div');
     heroImage.classList.add('hero-image');
     content.appendChild(heroImage);
@@ -23,24 +30,43 @@ export const home = () => {
     section.append(title, para);
     content.appendChild(section);
 
+    // Second div element
     const food = document.createElement('div');
     food.classList.add('food');
 
+    // Data for each card to be displayed
     const cardData = [
-        { title: 'Dish 1', text: 'Hi I am Dish1', price: '$100' },
-        { title: 'Dish 2', text: 'Okay Dish2', price: '$103' },
-        { title: 'Dish 2', text: 'This is Dish3', price: '$90' },
+        { title: 'Dish 1', text: 'Hi I am Dish1', price: '$100', src: lasagna},
+        { title: 'Dish 2', text: 'Okay Dish2', price: '$103', src: eggAvocado },
+        { title: 'Dish 2', text: 'This is Dish3', price: '$90', src: turkeySandwich },
     ]
 
-    cardData.forEach(({ title, text, price }) => {
+    cardData.forEach(item => {
+        // Create a card element
         const card = document.createElement('div');
         card.classList.add('card');
+        
+        // Image container within the card
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('img-container');
+        const image = document.createElement('img');
 
-        card.innerHTML = `
-            <h3> ${title} </h3>
-            <p> ${text} </p>
-            <p> ${price} </p>
-        `
+        // div element for Right part of the card
+        const cardRight = document.createElement('div');
+        cardRight.classList.add('card-right');
+        const title = document.createElement('h3');
+        const text = document.createElement('p');
+        const price = document.createElement('price');
+        
+        image.src = item.src;
+        image.classList.add('card-image');
+        imageContainer.appendChild(image);
+        title.textContent = item.title;
+        text.textContent = item.text;
+        price.textContent = item.price;
+
+        cardRight.append(title, text, price);
+        card.append(imageContainer, cardRight);
         food.appendChild(card);
     })
 

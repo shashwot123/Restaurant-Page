@@ -56,7 +56,35 @@ button {
 
 .food {
     display: flex;
-    justify-content: space-between;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: tan;
+    margin: 1rem;
+    border-radius: 3rem;
+    height: 200px;
+    width: 400px;
+}
+
+.card-right {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.img-container {
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+
+.card-image {
+    border-radius: 3rem;
+    height: 200px;
+    width: 200px;
 }
 
 footer {
