@@ -87,6 +87,44 @@ button {
     width: 200px;
 }
 
+.about-div {
+    max-width: 800px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.contact-container>div {
+    font-size: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.menu-container {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+
 footer {
     background-color: purple;
     place-items: center;
